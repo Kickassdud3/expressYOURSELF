@@ -16,7 +16,7 @@ $RECYCLE.BIN/
 
 # =======================
 # Customizations
-  *.cfg
+*.cfg
 # =======================
 # Windows shortcuts
 *.lnk
