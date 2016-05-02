@@ -26,15 +26,34 @@
     <!-- start of content -->
     <header>
       <div class="logo"></div>
-      <div class="links">
-        
-      </div>
+
+
     <a href="preview.html"> Try a preview of our site! </a>
     <h1> Sign up today! </h1>
     <h2> It only takes a few minutes </h2>
   </header>
+  <div class="signin">
+  <h1>Sign In:</h1>
+  <form>
+  Username:<br>
+  <input type="text" name="username"><br>
+  Password:<br>
+  <input type="password" name="psw">
+  </form>
 
+  <form>
+    <input type="radio" name="gender" value="male" checked> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other
+  </form>
 
+ <form>
+    <input type="email" name="email" required placeholder="Enter a valid email address">
+ </form>
+  </div>
+<form>
+   <input type="number" size="6" name="age" min="0" max="99" value="21"><br>
+</form>
     <!-- end -->
     </div>
  <script src="js/jquery.min.js"></script>
