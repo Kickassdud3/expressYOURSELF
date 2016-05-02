@@ -332,40 +332,6 @@ input[type="button"]:focus {
   flex-shrink: 0;
 }
 
-.fork-tag {
-  position: absolute;
-  top: 10px;
-  right: -10px;
-  background: #0074D9;
-  color: white;
-  padding: 2px 6px;
-  transition: all 0.3s ease-in-out;
-  transform-origin: top right;
-}
-
-.fork-tag:hover {
-  color: white;
-  animation: wiggle 0.4s linear 1;
-}
-
-@keyframes wiggle {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(8deg);
-  }
-  50% {
-    transform: rotate(-8deg);
-  }
-  80% {
-    transform: rotate(8deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 .flex-video {
   height: 0;
   margin-bottom: 0.88889rem;
@@ -450,4 +416,8 @@ body {
 
 .page-home article:last-child {
   margin-bottom: 0px;
+}
+
+header {
+  background-color: blue;
 }
