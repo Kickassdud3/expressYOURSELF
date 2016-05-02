@@ -351,6 +351,75 @@ input[type="button"]:focus {
   left: 0;
 }
 
+#nav-icon {
+  position: relative;
+  width: 60px;
+  z-index: 99;
+  height: 45px;
+  margin: 50px auto;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon span {
+  position: absolute;
+  display: block;
+  height: 6px;
+  width: 100%;
+  background: #000;
+  opacity: 1;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  border-radius: 2px;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0;
+  transform-origin: left center;
+  transition-delay: 0.15s;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 18px;
+  transform-origin: left center;
+  transition: 0.8s ease-in-out;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 36px;
+  transform-origin: left center;
+  transition-delay: 0.35s;
+}
+
+#nav-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 8px;
+}
+
+#nav-icon.open span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+#nav-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 42px;
+  left: 8px;
+}
+
+.container {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 body {
   margin: 10px;
   background-color: #ddd;
