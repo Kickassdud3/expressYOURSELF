@@ -5,7 +5,11 @@ $(function() {
 
   $navIcon.click(function() {
     $(this).toggleClass('open')
+
   });
+});
 });
 
 // add all functions here
+
+navIconClick();
