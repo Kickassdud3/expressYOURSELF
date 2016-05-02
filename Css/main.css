@@ -418,6 +418,14 @@ body {
   margin-bottom: 0px;
 }
 
+body {
+  background-color: #999999;
+  font-family: "Open Sans";
+}
+
 header {
   background-color: blue;
+  height: 20vh;
+  font-size: 2em;
+  color: green;
 }
