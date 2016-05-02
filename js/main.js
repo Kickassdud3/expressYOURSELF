@@ -1,14 +1,11 @@
 $(function() {
-//add all functions which need to run here
-  navIconClick();
+  // vars
+  $navIcon = $('#nav-icon');
+  function navIconClick() {
 
-  function navIconClick {
-    $navIcon = $('#nav-icon');
-    $navIcon.click(function() {
-      $(this).addClass('.open');
-      
-    });
+  $navIcon.click(function() {
+    $(this).toggleClass('open')
   });
+});
 
 // add all functions here
-  });
