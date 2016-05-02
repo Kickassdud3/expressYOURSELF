@@ -5,7 +5,7 @@ $(function() {
   function navIconClick {
     $navIcon = $('#nav-icon');
     $navIcon.click(function() {
-      
+      $(this).addClass('.open');
     });
   });
 
