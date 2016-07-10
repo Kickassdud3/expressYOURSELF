@@ -36,32 +36,133 @@
 
   <h1> SIGN UP HERE </h1>
 
-  <div class="signin">
-<form>
-<br>
-<center>
-Username:<input type="text" name="username" style="background:#bfbfbf;color:#212121;border-color:#212121;" onFocus="this.style.background = '#ffffff';" onBlur="this.style.background = '#bfbfbf';">
-<br>
- Password: <input type="password" name="password" style="background:#bfbfbf;color:#212121;border-color:#212121;" onFocus="this.style.background = '#ffffff';" onBlur="this.style.background = '#bfbfbf';">
-<br>
-<input type="button" value="Login" onClick="Login(this.form);" style="background:#EB0C3C;color:#000000;border-color:#212121;" onMouseOver="this.style.color = '#404040';" onMouseOut="this.style.color = '#000000';" onFocusr="this.style.color = '#404040';" onBlur="this.style.color = '#000000';">
-</center>
-</form>
-<script>
-function Login(form) {
-username = new Array("u1","u2","u3","u4","u5","u6","u7","u8","u9","u10");
-password = new Array("p1","p2","p3","p4","p5","p6","p7","p8","p9","p10");
-page = "secretpage" + ".html";
-if (form.username.value == username[0] && form.password.value == password[0] || form.username.value == username[1] && form.password.value == password[1] || form.username.value == username[2] && form.password.value == password[2] || form.username.value == username[3] && form.password.value == password[3] || form.username.value == username[4] && form.password.value == password[4] || form.username.value == username[5] && form.password.value == password[5] || form.username.value == username[6] && form.password.value == password[6] || form.username.value == username[7] && form.password.value == password[7] || form.username.value == username[8] && form.password.value == password[8] || form.username.value == username[9] && form.password.value == password[9]) {
-self.location.href = page;
-}
-else {
-alert("Either the username or password you entered is incorrect.\nPlease try again.");
-form.username.focus();
-}
-return true;
-}
-</script>
+  <form  action="login.php" autocomplete="on">
+       <h1>Log in</h1>
+       <p>
+            <label for="username" class="uname" data-icon="u" >Username:</label>
+            <input id="username" name="username" required="required" type="text" placeholder="Username"/>
+       </p>
+       <p>
+            <label for="password" class="youpasswd" data-icon="p">Password:</label>
+            <input id="password" name="password" required="required" type="password" placeholder="Password" />
+       </p>
+       <p class="keeplogin">
+            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+            <label for="loginkeeping">Keep me logged in</label>
+       </p>
+       <p class="login button">
+            <input type="submit" value="Login" />
+       </p>
+  </form>
+
+  <form  action="register.php" autocomplete="on">
+      <h1> Sign up </h1>
+      <p>
+           <label for="firstnamesignup" class="fname" data-icon="u">First Name:</label>
+           <input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="First" />
+      </p>
+      <p>
+           <label for="lastnamesignup" class="lname" data-icon="u">Last Name:</label>
+           <input id="lastnamesignup" name="lastnamesignup" required="required" type="text" placeholder="Last" />
+      </p>
+      <p>
+           <label for="usernamesignup" class="uname" data-icon="u">Username:</label>
+           <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Username" />
+      </p>
+      <p>
+           <label for="passwordsignup" class="youpasswd" data-icon="p">Password:</label>
+           <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="Password"/>
+      </p>
+      <p>
+           <label for="passwordsignup_confirm" class="password" data-icon="p">Confirm Password:</label>
+           <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="Password"/>
+      </p>
+      <p>
+           <label for="emailsignup" class="youmail" data-icon="e" >Email:</label>
+           <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="example@domain.com"/>
+      </p>
+      <p>
+           <label>Date of Birth:</label>
+           <select name="month" onChange="changeDate(this.options[selectedIndex].value);">
+           <option value="na">Month</option>
+           <option value="1">January</option>
+           <option value="2">February</option>
+           <option value="3">March</option>
+           <option value="4">April</option>
+           <option value="5">May</option>
+           <option value="6">June</option>
+           <option value="7">July</option>
+           <option value="8">August</option>
+           <option value="9">September</option>
+           <option value="10">October</option>
+           <option value="11">November</option>
+           <option value="12">December</option>
+           </select>
+           <select name="day" id="day">
+           <option value="na">Day</option>
+           </select>
+           <select name="year" id="year">
+           <option value="na">Year</option>
+           <option value="na">2002</option>
+           <option value="1">2001</option>
+           <option value="2">2000</option>
+           <option value="3">1999</option>
+           <option value="4">1998</option>
+           </select>
+           <script language="JavaScript" type="text/javascript">
+           function changeDate(i){
+           var e = document.getElementById('day');
+           while(e.length>0)
+           e.remove(e.length-1);
+           var j=-1;
+           if(i=="na")
+           k=0;
+           else if(i==2)
+           k=28;
+           else if(i==4||i==6||i==9||i==11)
+           k=30;
+           else
+           k=31;
+           while(j++<k){
+           var s=document.createElement('option');
+           var e=document.getElementById('day');
+           if(j==0){
+           s.text="Day";
+           s.value="na";
+           try{
+           e.add(s,null);}
+           catch(ex){
+           e.add(s);}}
+           else{
+           s.text=j;
+           s.value=j;
+           try{
+           e.add(s,null);}
+           catch(ex){
+           e.add(s);}}}}
+           y = 1998;
+           while (y-->1908){
+           var s = document.createElement('option');
+           var e = document.getElementById('year');
+           s.text=y;
+           s.value=y;
+           try{
+           e.add(s,null);}
+           catch(ex){
+           e.add(s);}}
+           </script>
+      </p>
+      <p>
+           <label>Gender:</label>
+           <select name="Gender">
+           <option value="male">Male</option>
+           <option value="female">Female</option>
+           </select>
+      </p>
+      <p class="signin button">
+      <input type="submit" value="Register"/>
+      </p>
+  </form>
 </div>
     </body>
 </html>
