@@ -1639,3 +1639,17 @@ header {
   background-color: #52b3d9;
   padding-top: 1em;
 }
+div.menu
+{
+width:200px;
+height:500px;
+background-color:#333;
+position:fixed;
+left:0px;
+top:0px;
+}
+
+.menu ul li
+{
+margin-bottom:20px;
+}
