@@ -1639,3 +1639,22 @@ header {
   background-color: #52b3d9;
   padding-top: 1em;
 }
+#content {
+  position:absolute;
+  right: 0;
+  top: 221px;
+  width: 150px;
+  padding: 0 30px 50px 15px;
+  font-size: small;
+  color: #FFFFFF;
+}
+
+.sidebox {
+  background: #92A4AE no-repeat left bottom;
+}
+#side_content {
+  float: right;
+  clear:both;
+   text-align: center;
+  position: absolute;
+}
