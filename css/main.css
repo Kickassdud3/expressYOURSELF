@@ -1655,6 +1655,6 @@ header {
 #side_content {
   float: right;
   clear:both;
-  text-align: center;
+   text-align: center;
   position: absolute;
 }
