@@ -1,0 +1,97 @@
+$mq-breakpoints: (
+	xs: 480px,
+	sm: 640px,
+	md: 820px,
+	lg: 960px
+);
+
+@import 'baseguide';
+
+.intro-title {
+	font-family: Georgia, serif;
+	font-weight: 900;
+	font-size: 2.36859em;
+
+	.wf-active & {
+		font-family: Merriweather, Georgia, serif;
+	}
+
+	@include mq(md) {
+		font-size: 3.15733em;
+	}
+}
+
+.intro-section {
+	padding: 10px;
+	background: #85c637;
+	background-image: linear-gradient(to left, #3ea6de 0%, #85c637 100%);
+
+	.container {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background: #fff;
+		background: rgba(255, 255, 255, 0.3);
+	}
+
+	@include mq(md) {
+		padding: 40px 35px;
+
+		.container {
+			max-width: mq-get-breakpoint-width(lg) - ($grid-gutter * 2);
+			padding: 40px;
+		}
+
+		p {
+			font-size: 1.125em;
+		}
+	}
+}
+
+.container .section {
+	margin-top: 15px;
+	padding-top: 15px;
+	border-top: 0.2em solid #efefef;
+
+	&:first-child {
+		margin-top: 0;
+		border-top: 0;
+	}
+
+	@include mq(sm) {
+		margin-top: 40px;
+		padding-top: 40px;
+	}
+}
+
+#grid .col {
+	margin-bottom: 30px;
+
+	> span {
+		display: block;
+		padding: 1em;
+		background: #efefef;
+	}
+}
+
+.btn-outline {
+	border-color: $button-bg;
+	background-color: transparent;
+	color: $button-bg;
+
+	&:hover, &:focus {
+		border-color: $button-hover-bg;
+		background-color: $button-hover-bg;
+	}
+}
+
+.form-group > .btn {
+	margin-bottom: 0.2em;
+}
+
+.btn-group {
+	margin-bottom: 0;
+}
+
+.media p {
+	margin-bottom: 0;
+}
